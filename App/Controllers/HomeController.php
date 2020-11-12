@@ -16,4 +16,7 @@ class HomeController extends AControllerBase
 
     public function classes(){
     }
+
+    public function howToStart(){
+    }
 }

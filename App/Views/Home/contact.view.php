@@ -17,8 +17,6 @@
 
     <div class="container-fluid padding">
         <div class="row text-center padding-bottom:5%">
-
-
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xlg-2 padding-bottomPictures">
                 <img class="human" src="semestralka/public/human.png" alt="">
                 <h4>Human</h4>
