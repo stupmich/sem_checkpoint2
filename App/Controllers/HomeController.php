@@ -11,7 +11,7 @@ class HomeController extends AControllerBase
     {
     }
 
-    public function contact(){
+    public function races(){
     }
 
     public function classes(){
