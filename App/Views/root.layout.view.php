@@ -32,7 +32,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="?c=home&a=contact">RACES</a>
-                            <a class="dropdown-item" href="classes.html">CLASSES</a>
+                            <a class="dropdown-item" href="?c=home&a=classes">CLASSES</a>
                             <a class="dropdown-item" href="howToStart.html">HOW TO START</a>
                         </div>
                     </li>
