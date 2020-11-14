@@ -51,6 +51,14 @@
 
                 </ul>
             </div>
+
+
+            <form class="form-inline ">
+                <a href="?c=home&a=races" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Login</a>
+                <a href="?c=home&a=add" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Registration</a>
+            </form>
+
+
         </nav>
 
         <div class="logo"></div>

@@ -19,4 +19,7 @@ class HomeController extends AControllerBase
 
     public function howToStart(){
     }
+
+    public function registration(){
+    }
 }
