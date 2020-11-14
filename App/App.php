@@ -1,7 +1,6 @@
 <?php
-
 namespace App;
-
+session_start();
 use App\Core\Router;
 
 /**

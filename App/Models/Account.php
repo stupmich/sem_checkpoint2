@@ -1,17 +1,19 @@
 <?php
 
-
+declare(strict_types=1);
+namespace App\Models;
 use App\Core\Model;
+
 
 class Account extends Model
 {
     protected $id;
-    protected ?string $login;
+    protected ?string $username;
     protected ?string $password;
 
-    public function __construct(?string $login = null, ?string $password = null)
+    public function __construct(?string $username = null, ?string $password = null)
     {
-        $this->login = $login;
+        $this->username = $username;
         $this->password = $password;
     }
 
@@ -27,9 +29,9 @@ class Account extends Model
     /**
      * @return string|null
      */
-    public function getLogin(): ?string
+    public function getUsername(): ?string
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**
@@ -49,11 +51,11 @@ class Account extends Model
     }
 
     /**
-     * @param string|null $login
+     * @param string|null $username
      */
-    public function setLogin(?string $login): void
+    public function setUsername(?string $username): void
     {
-        $this->login = $login;
+        $this->username = $username;
     }
 
     /**
@@ -69,7 +71,7 @@ class Account extends Model
 
     static public function setDbColumns()
     {
-        return ['id', 'login', 'password'];
+        return ['id', 'username', 'password'];
     }
 
     static public function setTableName()

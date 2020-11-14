@@ -1,13 +1,14 @@
 <div id="container">
-    <form>
+
+    <form method="post">
         <div class="form-group">
-            <label for="inputLogin">Login</label>
-            <input type="password" class="form-control" id="inputLogin">
+            <label>Login</label>
+            <input name="username" type="text" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword">
+            <label>Password</label>
+            <input name="password" type="text" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
