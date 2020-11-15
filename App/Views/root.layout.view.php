@@ -61,8 +61,8 @@
             } else {
             ?>
             <form class="form-inline ">
-                <a href="?c=registration&a=login" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Login</a>
-                <a href="?c=registration&a=add" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Registration</a>
+                <a href="?c=registration&a=login" class="btn btn-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 8%; font-size: large">Login</a>
+                <a href="?c=registration&a=add" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" style="margin-top: 8%; font-size: large">Registration</a>
             </form>
             <?php
             }

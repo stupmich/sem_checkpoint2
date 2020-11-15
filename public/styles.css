@@ -60,18 +60,19 @@ body{
 }
 
 #container2 {
+    color: #ffffff;
     position: relative;
-    left: 10%;
-    right: 5%;
-    width: 30%;
+    left: 30%;
+    right: 30%;
+    width: 40%;
     height: max-content ;
-    padding-bottom: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
-    margin-top: 2%;
-    margin-bottom: 10%;
-    background-color: darkgray;
-    border: dotted;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-left: 30px;
+    background-color: #343a40;
+    border: solid;
+    border-color: mediumslateblue;
 }
 
 .padding-bottomPictures{

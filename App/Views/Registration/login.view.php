@@ -1,29 +1,28 @@
 <?php /** @var Array $data */ ?>
-<div id="container">
-
+<div id="container2">
     <form method="post">
         <div class="form-group">
             <label>Username</label>
-            <input name="username" type="text" placeholder="Enter Username" class="form-control">
+            <input name="username" type="text" placeholder="enter username" class="form-control">
         </div>
 
         <div class="form-group">
             <label>Password</label>
-            <input name="password" type="password" placeholder="Enter Password" class="form-control">
+            <input name="password" type="password" placeholder="enter password" class="form-control">
         </div>
+
         <?php
         if ($data != null && $data['login'] != 1){
             ?>
-
-            <html> <p>Invalid password</p> </html>
-
+            <html> <p>Invalid username or password</p> </html>
+            <?php
+        } else {
+            ?>
+            <html> <p><br/ ></p> </html>
             <?php
         }
         ?>
-        <button type="submit" class="btn btn-primary">Submit</button>
-
-
-
+        <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
 
     </form>
 </div>
