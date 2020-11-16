@@ -3,12 +3,12 @@
     <form method="post">
         <div class="form-group">
             <label>Username</label>
-            <input name="username" type="text" placeholder="enter username" class="form-control">
+            <input name="username" type="text" placeholder="enter username" class="form-control" required>
         </div>
 
         <div class="form-group">
             <label>Password</label>
-            <input name="password" type="password" placeholder="enter password" class="form-control">
+            <input name="password" type="password" placeholder="enter password" class="form-control" required>
         </div>
 
         <?php

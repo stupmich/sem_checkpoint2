@@ -6,7 +6,6 @@
         <div class="form-group">
             <label>Username</label>
             <input name="username" type="text" placeholder="enter username" class="form-control" required>
-
         </div>
 
         <div class="form-group">
@@ -20,7 +19,7 @@
         </div>
 
         <?php
-        if ($data != null && $data['registration'] != 1){
+        if ($data != null && $data['login'] != 1){
             ?>
             <html> <p>This username or password has been already taken.</p> </html>
             <?php
@@ -30,7 +29,6 @@
             <?php
         }
         ?>
-
         <button type="submit" class="btn btn-primary" style="width:100%;">Register</button>
 
     </form>

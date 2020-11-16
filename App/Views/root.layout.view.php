@@ -53,23 +53,26 @@
             </div>
 
             <?php
-            if (isset($_SESSION['userId']))
-            {
-            ?>
-                <a href="?c=registration&a=logout"  class="text-decoration-none">Logout</a>
-            <?php
+            if (isset($_SESSION['userId'])) {
+                ?>
+                <form class="form-inline ">
+                    <a href="?c=registration&a=profile" class="btn btn-primary btn-sm active" role="button"
+                       aria-pressed="true" style="margin-top: 8%; font-size: large;">Profile</a>
+                    <a href="?c=registration&a=logout" class="btn btn-secondary btn-sm active" role="button"
+                       aria-pressed="true" style="margin-top: 8%; font-size: large;">Logout</a>
+                </form>
+                <?php
             } else {
-            ?>
-            <form class="form-inline ">
-                <a href="?c=registration&a=login" class="btn btn-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 8%; font-size: large">Login</a>
-                <a href="?c=registration&a=add" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" style="margin-top: 8%; font-size: large">Registration</a>
-            </form>
-            <?php
+                ?>
+                <form class="form-inline ">
+                    <a href="?c=registration&a=login" class="btn btn-primary btn-sm active" role="button"
+                       aria-pressed="true" style="margin-top: 8%; font-size: large">Login</a>
+                    <a href="?c=registration&a=add" class="btn btn-secondary btn-sm active" role="button"
+                       aria-pressed="true" style="margin-top: 8%; font-size: large">Registration</a>
+                </form>
+                <?php
             }
             ?>
-
-
-
         </nav>
 
         <div class="logo"></div>

@@ -118,6 +118,7 @@ abstract class Model
         }
     }
 
+
     /**
      * Saves the current model to DB (if model id is set, updates it, else creates a new model)
      * @return mixed
