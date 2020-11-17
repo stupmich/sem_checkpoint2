@@ -20,5 +20,5 @@
 
     </div>
 
-    <a class="btn btn-primary" href="?c=registration&a=modifyProfile" role="button" style="margin-left: 5%; width: fit-content">Modify my profile</a>
+    <a class="btn btn-primary" href="?c=account&a=modifyProfile" role="button" style="margin-left: 5%; width: fit-content">Modify my profile</a>
 </div>

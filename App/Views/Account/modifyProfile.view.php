@@ -1,7 +1,6 @@
 <?php /** @var Array $data */
 /** @var \App\Models\Account $account */
-$account = $data['account'];
-
+$account = $data['Account'];
 ?>
 
 <div id="container" style="padding:2%;">
@@ -86,6 +85,6 @@ $account = $data['account'];
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="?c=registration&a=delete" class="btn btn-danger btn-primary">Delete account</a>
+        <a href="?c=account&a=delete" class="btn btn-danger btn-primary">Delete account</a>
 </div>
 </div>

@@ -6,7 +6,7 @@ use \App\Models\Account;
 use App\Core\AControllerBase;
 
 
-class RegistrationController extends AControllerBase
+class AccountController extends AControllerBase
 {
 
     public function index()
@@ -49,7 +49,7 @@ class RegistrationController extends AControllerBase
         }
 
         return [
-            'account' => $account
+            'Account' => $account
         ];
     }
 

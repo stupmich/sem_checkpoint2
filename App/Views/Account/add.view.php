@@ -1,5 +1,3 @@
-
-
 <?php /** @var Array $data */ ?>
 <div id="container2">
     <form method="post">
