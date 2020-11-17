@@ -1,6 +1,6 @@
 <?php /** @var Array $data */ ?>
 
-<div id="container">
+<div id="container" style="padding:2%;">
     <h1 style="margin-left: 5%">My account</h1>
     <div class="card mb-3" style="width: 80%; margin-left: 5%">
         <div class="row no-gutters">
@@ -9,8 +9,10 @@
             </div>
             <div class="col-md-9">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $data['username'] ?></h5>
-                    <p class="card-text"></p>
+                    <h4 class="card-title"><?= $data['username'] ?></h4>
+                    <h5 class="card-title">Faction: <?= $data['faction'] ?></h5>
+                    <h6 class="card-title">Realm: <?= $data['realm'] ?></h6>
+                    <p class="card-text"><?= $data['about'] ?></p>
                 </div>
             </div>
         </div>

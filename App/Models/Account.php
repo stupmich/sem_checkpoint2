@@ -141,7 +141,7 @@ class Account extends Model
 
     static public function setDbColumns()
     {
-        return ['id', 'username', 'password','email'];
+        return ['id', 'username', 'password','email', 'faction', 'realm', 'about'];
     }
 
     static public function setTableName()

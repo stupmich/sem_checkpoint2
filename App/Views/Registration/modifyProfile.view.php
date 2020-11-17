@@ -4,7 +4,7 @@ $account = $data['account'];
 
 ?>
 
-<div id="container">
+<div id="container" style="padding:2%;">
     <form method="post">
         <div class="form-group">
             <label>Username</label>
@@ -23,104 +23,59 @@ $account = $data['account'];
 
         <div class="form-group">
             <label>Faction</label>
-            <select name="faction" class="select form-control" required="" id="faction">
-                <option value="">-----</option>
-                <option value="alliance" selected="">Alliance</option>
-                <option value="horde">Horde</option>
+            <select name="faction" class="select form-control"  required id="faction">
+                <option disabled selected value="">Choose...</option>
+                <option value="Alliance" <?php if ($account->getFaction()=="Alliance") echo "selected='selected'";?> >Alliance</option>
+                <option value="Horde" <?php if ($account->getFaction()=="Horde") echo "selected='selected'";?>>Horde</option>
             </select>
         </div>
 
         <div class="form-group">
             <label>Realm</label>
-            <select name="realm" class="select form-control" required="" id="id_realm">
-                <option value="">---------</option>
+            <select name="realm" class="select form-control" required id="id_realm">
+                <option disabled selected value="">Choose...</option>
                 <optgroup label="en">
-                    <option value="5">EN-PvE Mirage Raceway</option>
-                    <option value="61">EN-PvE Nethergarde Keep</option>
-                    <option value="6">EN-PvE Pyrewood Village</option>
-                    <option value="34">EN-PvP Ashbringer</option>
-                    <option value="35">EN-PvP Dreadmist</option>
-                    <option value="26">EN-PvP Gehennas</option>
-                    <option value="3">EN-PvP Golemagg</option>
-                    <option value="4">EN-PvP Shazzrah</option>
-                    <option value="38">EN-PvP Skullflame</option>
-                    <option value="57">EN-PvP Firemaw</option>
-                    <option value="58">EN-PvP Flamelash</option>
-                    <option value="59" selected="">EN-PvP Gandling</option>
-                    <option value="60">EN-PvP Mograine</option>
-                    <option value="62">EN-PvP Noggenfogger</option>
-                    <option value="63">EN-PvP Razorgore</option>
-                    <option value="64">EN-PvP Stonespine</option>
-                    <option value="65">EN-PvP Ten Storms</option>
-                    <option value="7">EN-RP Hydraxian Waterlords</option>
-                    <option value="8">EN-RP-PvP Zandalar Tribe</option>
-                    <option value="74">EN-PvP Earthshaker</option>
+                    <option value="EN-PvE Mirage Raceway" <?php if ($account->getRealm()=="EN-PvE Mirage Raceway") echo "selected='selected'";?>>EN-PvE Mirage Raceway</option>
+                    <option value="EN-PvE Nethergarde Keep" <?php if ($account->getRealm()=="EN-PvE Nethergarde Keep") echo "selected='selected'";?>>EN-PvE Nethergarde Keep</option>
+                    <option value="EN-PvE Pyrewood Village" <?php if ($account->getRealm()=="EN-PvE Pyrewood Village") echo "selected='selected'";?>>EN-PvE Pyrewood Village</option>
+                    <option value="EN-PvP Ashbringer" <?php if ($account->getRealm()=="EN-PvP Ashbringer") echo "selected='selected'";?>>EN-PvP Ashbringer</option>
+                    <option value="EN-PvP Dreadmist" <?php if ($account->getRealm()=="EN-PvP Dreadmist") echo "selected='selected'";?>>EN-PvP Dreadmist</option>
+                    <option value="EN-PvP Gehennas" <?php if ($account->getRealm()=="EN-PvP Gehennas") echo "selected='selected'";?>>EN-PvP Gehennas</option>
+                    <option value="EN-PvP Golemagg" <?php if ($account->getRealm()=="EN-PvP Golemagg") echo "selected='selected'";?>>EN-PvP Golemagg</option>
+                    <option value="EN-PvP Shazzrah" <?php if ($account->getRealm()=="EN-PvP Shazzrah") echo "selected='selected'";?>>EN-PvP Shazzrah</option>
+                    <option value="EN-PvP Skullflame" <?php if ($account->getRealm()=="EN-PvP Skullflame") echo "selected='selected'";?>>EN-PvP Skullflame</option>
                 </optgroup>
                 <optgroup label="fr">
-                    <option value="1">FR-PvE Auberdine</option>
-                    <option value="32">FR-PvP Amnennar</option>
-                    <option value="33">FR-PvP Finkle</option>
-                    <option value="2">FR-PvP Sulfuron</option>
+                    <option value="FR-PvE Auberdine" <?php if ($account->getRealm()=="FR-PvE Auberdine") echo "selected='selected'";?>>FR-PvE Auberdine</option>
+                    <option value="FR-PvP Amnennar" <?php if ($account->getRealm()=="FR-PvP Amnennar") echo "selected='selected'";?>>FR-PvP Amnennar</option>
+                    <option value="FR-PvP Finkle" <?php if ($account->getRealm()=="FR-PvP Finkle") echo "selected='selected'";?>>FR-PvP Finkle</option>
+                    <option value="FR-PvP Sulfuron" <?php if ($account->getRealm()=="FR-PvP Sulfuron") echo "selected='selected'";?>>FR-PvP Sulfuron</option>
                 </optgroup>
                 <optgroup label="de">
-                    <option value="9">DE-PvE Everlook</option>
-                    <option value="67">DE-PvE Lakeshire</option>
-                    <option value="30">DE-PvE Razorfen</option>
-                    <option value="36">DE-PvP Dragon’s Call</option>
-                    <option value="10">DE-PvP Lucifron</option>
-                    <option value="31">DE-PvP Venoxis</option>
-                    <option value="66">DE-PvP Patchwerk</option>
-                    <option value="68">DE-PvP Transcendence</option>
+                    <option value="DE-PvE Everlook"<?php if ($account->getRealm()=="DE-PvE Everlook") echo "selected='selected'";?>>DE-PvE Everlook</option>
+                    <option value="DE-PvE Lakeshire" <?php if ($account->getRealm()=="DE-PvE Lakeshire") echo "selected='selected'";?>>DE-PvE Lakeshire</option>
+                    <option value="DE-PvE Razorfen" <?php if ($account->getRealm()=="DE-PvE Razorfen") echo "selected='selected'";?>>DE-PvE Razorfen</option>
                 </optgroup>
                 <optgroup label="oc">
-                    <option value="25">OC-PvE Remulos</option>
-                    <option value="24">OC-PvP Arugal</option>
-                    <option value="55">OC-PvP Felstriker</option>
-                    <option value="56">OC-PvP Yojamba</option>
+                    <option value="OC-PvE Remulos" <?php if ($account->getRealm()=="OC-PvE Remulos") echo "selected='selected'";?>>OC-PvE Remulos</option>
+                    <option value="OC-PvP Arugal" <?php if ($account->getRealm()=="OC-PvP Arugal") echo "selected='selected'";?>>OC-PvP Arugal</option>
+                    <option value="OC-PvP Felstriker" <?php if ($account->getRealm()=="OC-PvP Felstriker") echo "selected='selected'";?>>OC-PvP Felstriker</option>
+                    <option value="OC-PvP Yojamba" <?php if ($account->getRealm()=="OC-PvP Yojamba") echo "selected='selected'";?>>OC-PvP Yojamba</option>
                 </optgroup>
-                <optgroup label="ru">
-                    <option value="12">RU-PvE Хроми (Chromie)</option>
-                    <option value="11">RU-PvP Пламегор (Flamegor)</option>
-                    <option value="37">RU-PvP Рок-Делар (Rhok’delar)</option>
-                    <option value="69">RU-PvP Змейталак (Wyrmthalak)</option>
-                </optgroup>
+
                 <optgroup label="us-east">
-                    <option value="43">US-East-PvE Ashkandi</option>
-                    <option value="13">US-East-PvE Mankrik</option>
-                    <option value="14">US-East-PvE Pagle</option>
-                    <option value="45">US-East-PvE Westfall</option>
-                    <option value="42">US-East-PvE Windseeker</option>
-                    <option value="40">US-East-PvP Benediction</option>
-                    <option value="72">US-East-PvP Earthfury</option>
-                    <option value="15">US-East-PvP Faerlina</option>
-                    <option value="47">US-East-PvP Incendius</option>
-                    <option value="73">US-East-PvP Heartseeker</option>
-                    <option value="16">US-East-PvP Herod</option>
-                    <option value="70">US-East-PvP Netherwind</option>
-                    <option value="17">US-East-PvP Thalnos</option>
-                    <option value="29">US-East-PvP Skeram</option>
-                    <option value="27">US-East-PvP Stalagg</option>
-                    <option value="48">US-East-PvP Kirtonos</option>
-                    <option value="50">US-East-PvP Kromcrush</option>
-                    <option value="53">US-East-PvP Sulfuras</option>
-                    <option value="54">US-East-RP-PvP Deviate Delight</option>
-                    <option value="18">US-East-RP Bloodsail Buccaneers</option>
+                    <option value="US-East-PvE Ashkandi" <?php if ($account->getRealm()=="US-East-PvE Ashkandi") echo "selected='selected'";?>>US-East-PvE Ashkandi</option>
+                    <option value="US-East-PvE Mankrik" <?php if ($account->getRealm()=="US-East-PvE Mankrik") echo "selected='selected'";?>>US-East-PvE Mankrik</option>
+                    <option value="US-East-PvE Pagle" <?php if ($account->getRealm()=="US-East-PvE Pagle") echo "selected='selected'";?>>US-East-PvE Pagle</option>
+                    <option value="US-East-PvE Westfall" <?php if ($account->getRealm()=="US-East-PvE Westfall") echo "selected='selected'";?>>US-East-PvE Westfall</option>
+
+
                 </optgroup>
                 <optgroup label="us-pacific">
-                    <option value="19">US-Pacific-PvE Atiesh</option>
-                    <option value="39">US-Pacific-PvE Azuresong</option>
-                    <option value="20">US-Pacific-PvE Myzrael</option>
-                    <option value="44">US-Pacific-PvE Old Blanchy</option>
-                    <option value="71">US-Pacific-PvP Arcanite Reaper</option>
-                    <option value="46">US-Pacific-PvP Bigglesworth</option>
-                    <option value="28">US-Pacific-PvP Blaumeux</option>
-                    <option value="21">US-Pacific-PvP Fairbanks</option>
-                    <option value="41">US-Pacific-PvP Thunderfury</option>
-                    <option value="22">US-Pacific-PvP Whitemane</option>
-                    <option value="49">US-Pacific-PvP Kurinaxx</option>
-                    <option value="51">US-Pacific-PvP Rattlegore</option>
-                    <option value="52">US-Pacific-PvP Smolderweb</option>
-                    <option value="23">US-Pacific-RP-PvP Grobbulus</option>
+                    <option value="US-Pacific-PvE Atiesh" <?php if ($account->getRealm()=="US-Pacific-PvE Atiesh") echo "selected='selected'";?>>US-Pacific-PvE Atiesh</option>
+                    <option value="US-Pacific-PvE Azuresong" <?php if ($account->getRealm()=="US-Pacific-PvE Azuresong") echo "selected='selected'";?>>US-Pacific-PvE Azuresong</option>
+                    <option value="US-Pacific-PvE Myzrael" <?php if ($account->getRealm()=="US-Pacific-PvE Myzrael") echo "selected='selected'";?>>US-Pacific-PvE Myzrael</option>
+                    <option value="US-Pacific-PvE Old Blanchy" <?php if ($account->getRealm()=="US-Pacific-PvE Old Blanchy") echo "selected='selected'";?>>US-Pacific-PvE Old Blanchy</option>
                 </optgroup>
             </select>
         </div>
@@ -129,5 +84,8 @@ $account = $data['account'];
             <label>About</label>
             <textarea name="about" class="form-control" ><?=$account->getAbout()?></textarea>
         </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="?c=registration&a=delete" class="btn btn-danger btn-primary">Delete account</a>
 </div>
 </div>
