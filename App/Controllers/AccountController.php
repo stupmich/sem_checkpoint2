@@ -54,7 +54,7 @@ class AccountController extends AControllerBase
             $account->setRealm($_POST['realm']);
             $account->setAbout($_POST['about']);
             $account->save();
-            header('Location: ?c=home');
+            header('Location: ?c=account&a=profile');
         }
 
         return [
@@ -112,7 +112,7 @@ class AccountController extends AControllerBase
                     $_SESSION['userId'] = $acc->getId();
                     $_SESSION['start'] = time(); // Taking now logged in time.
                     // Ending a session in 30 minutes from the starting time.
-                    $_SESSION['expire'] = $_SESSION['start'] + (10);
+                    $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
                     header('Location: http://localhost/somefolder/homepage.php');
                     header('Location: ?c=home');
                     return [
