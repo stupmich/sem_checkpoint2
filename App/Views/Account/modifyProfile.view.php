@@ -7,17 +7,17 @@ $account = $data['Account'];
     <form method="post">
         <div class="form-group">
             <label>Username</label>
-            <input name="username" type="text"  class="form-control" value="<?=$account->getUsername()?>" >
+            <input name="username" type="text"  class="form-control" value="<?=$account->getUsername()?>" required >
         </div>
 
         <div class="form-group">
             <label>Password</label>
-            <input name="password" type="text"  class="form-control" value="<?=$account->getPassword()?>">
+            <input name="password" type="text"  class="form-control" value="<?=$account->getPassword()?>" required>
         </div>
 
         <div class="form-group">
             <label>Email address</label>
-            <input name="email" type="email"  class="form-control" value="<?=$account->getEmail()?>">
+            <input name="email" type="email"  class="form-control" value="<?=$account->getEmail()?>" required>
         </div>
 
         <div class="form-group">

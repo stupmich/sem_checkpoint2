@@ -11,6 +11,7 @@ class AccountController extends AControllerBase
 
     public function index()
     {
+        return[];
     }
 
     public function profile() {
@@ -18,8 +19,7 @@ class AccountController extends AControllerBase
 
         $accounts=Account::getAll();
         foreach ($accounts as $acc) {
-            if ($acc->getId() == $id)
-            {
+            if ($acc->getId() == $id) {
                 return [
                     'username' => $acc->getUsername(),
                     'realm' => $acc->getRealm(),
