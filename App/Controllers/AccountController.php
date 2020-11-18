@@ -15,18 +15,27 @@ class AccountController extends AControllerBase
     }
 
     public function profile() {
-        $id = $_SESSION['userId'];
+        $now = time(); // Checking the time now when home page starts.
 
-        $accounts=Account::getAll();
-        foreach ($accounts as $acc) {
-            if ($acc->getId() == $id) {
-                return [
-                    'username' => $acc->getUsername(),
-                    'realm' => $acc->getRealm(),
-                    'email' => $acc->getEmail(),
-                    'faction' => $acc->getFaction(),
-                    'about' => $acc->getAbout(),
-                ];
+        if ($now > $_SESSION['expire']) {
+            echo "Your session has expired! <a href='?c=account&a=login'>Login here</a>";
+            $this->logout();
+            return [
+                'expired' => 1
+            ];
+        } else {
+            $id = $_SESSION['userId'];
+            $accounts=Account::getAll();
+            foreach ($accounts as $acc) {
+                if ($acc->getId() == $id) {
+                    return [
+                        'username' => $acc->getUsername(),
+                        'realm' => $acc->getRealm(),
+                        'email' => $acc->getEmail(),
+                        'faction' => $acc->getFaction(),
+                        'about' => $acc->getAbout(),
+                    ];
+                }
             }
         }
     }
@@ -101,6 +110,10 @@ class AccountController extends AControllerBase
                 if ($acc->getUsername() == $username && $acc->getPassword()==$password)
                 {
                     $_SESSION['userId'] = $acc->getId();
+                    $_SESSION['start'] = time(); // Taking now logged in time.
+                    // Ending a session in 30 minutes from the starting time.
+                    $_SESSION['expire'] = $_SESSION['start'] + (10);
+                    header('Location: http://localhost/somefolder/homepage.php');
                     header('Location: ?c=home');
                     return [
                         'login' => 1

@@ -1,6 +1,22 @@
 <?php
 namespace App;
 session_start();
+if (isset($_SESSION['expire'])) {
+    $now = time();
+    if ($now > $_SESSION['expire']) {
+        $_SESSION = array();
+
+        if(ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '' , time()-42000, $params["path"], $params["domain"],
+                $params["secure"],$params["httponly"]);
+        }
+        session_destroy();
+    }
+}
+$now = time(); // Checking the time now when home page starts.
+
+
 use App\Core\Router;
 
 /**

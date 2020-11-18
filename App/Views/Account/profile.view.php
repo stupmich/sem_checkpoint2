@@ -1,4 +1,6 @@
-<?php /** @var Array $data */ ?>
+<?php /** @var Array $data */
+
+?>
 
 <div id="container" style="padding:2%;">
     <h1 style="margin-left: 5%">My account</h1>
@@ -16,7 +18,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 
